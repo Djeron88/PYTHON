@@ -1,3 +1,28 @@
+```python
+from loguru import logger
+
+
+class logger1:
+    logger.add("./Logs/automation.log", format="{time} {level} {message}",
+               level="DEBUG", rotation="10 MB")
+
+
+"""
+logger.add("file_1.log", rotation="500 MB")    # Automatically rotate too big file
+logger.add("file_2.log", rotation="12:00")     # New file is created each day at noon
+logger.add("file_3.log", rotation="1 week")    # Once the file is too old, it's rotated
+
+logger.add("file_X.log", retention="10 days")  # Cleanup after some time
+
+logger.add("file_Y.log", compression="zip")    # Save some loved space
+retention='1 minute'
+"""
+```
+
+
+
+
+
 # HW_2_python 
 >Задание 1 – решить и блок схема
 Пользователь вводит с клавиатуры количество метров. В зависимости от выбора пользователя программа переводит метры в мили, дюймы или ярды.
